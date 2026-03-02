@@ -1,0 +1,11 @@
+My idea of a app is one that helps you organize the weeakly workout routines for the gym.
+In a simple way, easy to understand and easy to update.
+KEY FEATURES
+catalog of exercises with name and image, option of share routines within users, also be able to track the progress and option to take notes. 
+a) What problem does my app solve or what purpose does it serve ?.
+Its gonna help the users by making their workouts and the information about progress much more easy to save, read, understand and share between friends or community.
+b) Who is the intended user?
+Its gonna be more directed to the people who workout in the gym and coaches.
+c)What actions will users be able to perform?
+sing up, select from a catalog of exercises and add their own excercises if they wish, share their routines, take notes and saving them.
+

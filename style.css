@@ -1,0 +1,65 @@
+.navbar {
+    background-color:black ;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 5px;
+    margin:15px;
+    border-radius: 60cm;
+    opacity: 75%;
+}
+.navbar a{
+    text-decoration: none;
+    text-align: center;
+    flex: content;
+    color:white;
+    float: left;
+    padding: 14px  16px;
+    font-family: fantasy;
+}
+.navbar a:hover{
+    background-color: grey;
+
+}
+.navbar a:active{
+    background-color: grey;
+    color: white;
+}
+.formregister {
+    padding: 10px  11px;
+}
+.formregister label{
+    font-weight: bold;
+    padding: 2px; 
+    font-style: oblique;
+    display: flex;
+    
+}
+.formregister button{
+    padding: 4px;
+    margin-top: 8px;
+}
+.formlogin {
+    padding: 10px  11px;
+}
+.formlogin label {
+    font-weight: bold;
+    padding: 2px; 
+    font-style: oblique;
+    display: flex;
+    color: white;
+}
+.formlogin button {
+    padding: 4px;
+    margin-top: 8px;
+}
+.regbody{
+    background-image:url(Images/background.jpg);
+    background-size: cover;
+}
+.logbody{
+    background-image: url(Images/background\ login.jpg);
+    background-size: cover;
+}
+.logbody h1{
+    color: white;
+}
