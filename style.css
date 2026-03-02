@@ -6,6 +6,7 @@
     margin:15px;
     border-radius: 60cm;
     opacity: 75%;
+    flex-wrap: wrap;
 }
 .navbar a{
     text-decoration: none;
@@ -62,4 +63,12 @@
 }
 .logbody h1{
     color: white;
+}
+.notebody{
+    background-image: url(Images/jason-leung-mZNRsYE9Qi4-unsplash.jpg);
+    background-size: cover;
+}
+.notebody h1{
+    padding: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
