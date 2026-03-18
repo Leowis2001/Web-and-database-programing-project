@@ -9,3 +9,5 @@ Its gonna be more directed to the people who workout in the gym and coaches.
 c)What actions will users be able to perform?
 sing up, select from a catalog of exercises and add their own excercises if they wish, share their routines, take notes and saving them.
 
+![my lucidchart](/assets/Images/lucidchart.png "lucidchart")
+
