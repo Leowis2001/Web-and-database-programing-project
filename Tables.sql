@@ -1,0 +1,31 @@
+CREATE TABLE User ( UserID INT AUTO_INCREMENT PRIMARY KEY, FullName VARCHAR(100) NOT NULL, UserEMAIL VARCHAR(175) UNIQUE NOT NULL, Password VARCHAR(200) NOT NULL );
+
+
+CREATE TABLE WorkOutRoutine (
+ -> WorkoutID INT AUTO_INCREMENT PRIMARY KEY,
+ -> WorkoutName VARCHAR(200) NOT NULL,
+ -> WorkoutDescription TEXT,
+ -> EstimatedTime VARCHAR(100)
+ -> RestTimeInfo VARCHAR(100),
+ -> UserID INT NOT NULL,
+ -> CONSTRAINT fk_user_routine FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE
+ -> );
+
+
+ CREATE TABLE Exercises (
+ -> ExerciseID INT AUTO_INCREMENT PRIMARY KEY,
+ -> WorkoutID INT NOT NULL,
+ -> ExerciseName VARCHAR(150) NOT NULL,
+ -> PictureURL VARCHAR(300),
+ -> CONSTRAINT fk_routine_exercise FOREIGN KEY (WorkoutID) REFERENCES WorkOutRoutine(WorkoutID) ON DELETE CASCADE
+ -> );
+
+
+ CREATE TABLE Review (
+ -> ReviewID INT AUTO_INCREMENT PRIMARY KEY,
+ -> Content TEXT NOT NULL,
+ -> UserID INT NOT NULL,
+ -> WorkoutID INT NOT NULL,
+ -> CONSTRAINT fk_user_review FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE,
+ -> CONSTRAINT fk_routine_review FOREIGN KEY (WorkoutID) REFERENCES WorkOutRoutine(WorkoutID) ON DELETE CASCADE
+ -> );
