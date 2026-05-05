@@ -1,0 +1,29 @@
+{
+  "name": "project-wz",
+  "version": "1.0.0",
+  "description": "Workouts app",
+  "homepage": "https://github.com/Leowis2001/Web-and-database-programing-project#readme",
+  "bugs": {
+    "url": "https://github.com/Leowis2001/Web-and-database-programing-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leowis2001/Web-and-database-programing-project.git"
+  },
+  "license": "ISC",
+  "author": "WinstonZM",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
