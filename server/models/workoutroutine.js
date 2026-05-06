@@ -17,9 +17,38 @@ async function createTable() {
 
 createTable();
 
+async function createWorkout(name, description) {
+    return await query(
+        `INSERT INTO WotkoutRoutine (Name, Descrption) VALUES (?, ?)`,
+        [name, description]
+    );
+}
+
 async function getAllWorkoutRoutines() {
     let sql = `SELECT * FROM WorkOutRoutine;`;
     return await query(sql);
 }
 
-module.exports = { getAllWorkoutRoutines };
+
+async function updateWorkout(id, name, descrption) {
+    return await query(
+        `UPDATE WorkoutRoutine SET Name=?, Description=? WHERE WorkoutID=?`,
+        [name, descrption, id]
+    );
+
+}
+
+
+async function deleteWorkout(id) {
+    return await query(
+        `DELETE FROM WorkoutRoutine WHERE WorkoutID=?`,
+        [id]
+    );
+}
+
+module.exports = { 
+    createWorkout,
+    getAllWorkoutRoutines,
+    updateWorkout,
+    deleteWorkout
+ };

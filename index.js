@@ -27,3 +27,5 @@ app.use("/workoutroutine", workoutRoutes)
 const PORT = process.env.PORT || 3500
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!!`))
+app.use(express.static(__dirname + "/public"));
+app.get('/', (req, res) => res.sendfile(Path.join(__dirname, '/public/register.html')));
