@@ -12,43 +12,42 @@ async function createTable() {
      CONSTRAINT fk_user_routine FOREIGN KEY (UserID) REFERENCES User(UserID) ON DELETE CASCADE
     )`;
 
-    await query(sql);
+    try {
+        await query(sql);
+    } catch (err) {
+        console.error("Error creating WorkOutRoutine table:", err.message);
+    }
 }
 
 createTable();
 
-async function createWorkout(name, description) {
-    return await query(
-        `INSERT INTO WotkoutRoutine (Name, Descrption) VALUES (?, ?)`,
-        [name, description]
-    );
+// Note: Added userId since the table requires it!
+async function createWorkout(name, description, userId) {
+    const sql = `INSERT INTO WorkOutRoutine (WorkoutName, WorkoutDescription, UserID) VALUES (?, ?, ?)`;
+    return await query(sql, [name, description, userId]);
 }
 
 async function getAllWorkoutRoutines() {
-    let sql = `SELECT * FROM WorkOutRoutine;`;
+    const sql = `SELECT * FROM WorkOutRoutine;`;
     return await query(sql);
 }
 
-
-async function updateWorkout(id, name, descrption) {
-    return await query(
-        `UPDATE WorkoutRoutine SET Name=?, Description=? WHERE WorkoutID=?`,
-        [name, descrption, id]
-    );
-
+async function updateWorkout(id, name, description) {
+    const sql = `
+        UPDATE WorkOutRoutine 
+        SET WorkoutName = ?, WorkoutDescription = ? 
+        WHERE WorkoutID = ?`;
+    return await query(sql, [name, description, id]);
 }
 
-
 async function deleteWorkout(id) {
-    return await query(
-        `DELETE FROM WorkoutRoutine WHERE WorkoutID=?`,
-        [id]
-    );
+    const sql = `DELETE FROM WorkOutRoutine WHERE WorkoutID = ?`;
+    return await query(sql, [id]);
 }
 
 module.exports = { 
     createWorkout,
-    getAllWorkoutRoutines,
+    getAllWorkoutRoutines, 
     updateWorkout,
     deleteWorkout
- };
+};

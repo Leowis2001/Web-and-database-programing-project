@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bodyroutine">
+    <nav class="navbar">
+        <a href="register.html">Register</a>
+        <a href="login.html">Log in</a>
+        <a href="Note.html">Notes</a>
+        <a href="workoutroutine.html">Workoutroutine</a>
+
+    </nav>
+    <nav>
+        <span id="welcome-msg"></span>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+    <h1>Create a Workout Routine</h1>
+    
+    <form id="workout-form">
+        <input type="text" id="workoutName" placeholder="Workout Name" required>
+        <textarea id="workoutDesc" placeholder="Description (Exercises, sets, reps)"></textarea>
+        <button type="submit">Save Routine</button>
+    </form>
+
+    <hr>
+
+    <h2>My Routines</h2>
+    <div id="workout-list">
+        </div>
+
+    <script src="workoutroutine.js"></script>
+</body>
+</html>

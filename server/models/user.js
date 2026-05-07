@@ -50,7 +50,7 @@ async function deleteUser(id) {
 
 
 async function loginUser(email, password) {
-    const sql = `SELECT * FRFOM User WHERE UserEMAIL = ?`;
+    const sql = `SELECT * FROM User WHERE UserEMAIL = ?`;
     const result = await query(sql, [email]);
 
     if (result.length === 0) return null;
